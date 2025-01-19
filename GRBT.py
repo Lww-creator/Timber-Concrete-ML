@@ -23,7 +23,7 @@ bunch = Bunch(
 X=pd.DataFrame(bunch.data,columns=bunch.feature_names)
 y=bunch.target
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=1)
-model=GradientBoostingRegressor(random_state=123,n_estimators=431,max_depth=3,learning_rate=0.3096,min_samples_split=2)
+model=GradientBoostingRegressor(random_state=123,n_estimators=63,max_depth=5,learning_rate=0.32095,min_samples_split=2)
 model.fit(X_train,y_train)
 print(model.score(X_train,y_train))
 print(model.score(X_test,y_test))
